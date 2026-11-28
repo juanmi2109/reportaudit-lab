@@ -1,0 +1,22 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://github.com/juanmi2109/reportaudit-lab/vex/2026-001",
+  "author": "Juan Miguel Hernández Romero",
+  "timestamp": "2026-11-27T00:00:00Z",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2024-34069"
+      },
+      "products": [
+        {
+          "@id": "pkg:pypi/werkzeug@3.0.1"
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "ReportAudit ejecuta el servicio con debug=False en app/servicio.py. El depurador interactivo de Werkzeug permanece desactivado en el modo de ejecución previsto, por lo que la funcionalidad vulnerable no se ejecuta en este contexto. Se recomienda actualizar igualmente la dependencia."
+    }
+  ]
+}
